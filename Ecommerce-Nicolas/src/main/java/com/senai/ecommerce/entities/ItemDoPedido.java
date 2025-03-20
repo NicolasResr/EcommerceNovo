@@ -14,12 +14,8 @@ public class ItemDoPedido {
 	private Integer quantidade;
 	private double preco;
 	
-	
-	
 	public ItemDoPedido() {
 	}
-
-
 
 	public ItemDoPedido(Pedido pedido, Produto produto, Integer quantidade, double preco) {
 		id.setPedido(pedido);
@@ -27,8 +23,6 @@ public class ItemDoPedido {
 		this.quantidade = quantidade;
 		this.preco = preco;
 	}
-
-
 
 	public Pedido getPedido() {
 		return id.getPedido();
@@ -38,7 +32,6 @@ public class ItemDoPedido {
 		id.setPedido(pedido);
 	}
 
-	
 	public Produto getProduto() {
 		return id.getProduto();
 	}
@@ -47,30 +40,20 @@ public class ItemDoPedido {
 		id.setProduto(produto);
 	}
 	
-
 	public Integer getQuantidade() {
 		return quantidade;
 	}
-
-
 
 	public void setQuantidade(Integer quantidade) {
 		this.quantidade = quantidade;
 	}
 
-
-
 	public double getPreco() {
 		return preco;
 	}
-
-
 
 	public void setPreco(double preco) {
 		this.preco = preco;
 	}
 	
-	
-	
-
 }
