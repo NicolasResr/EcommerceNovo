@@ -2,7 +2,6 @@ package com.senai.ecommerce.entities;
 
 import java.time.Instant;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 import com.senai.ecommerce.enun.StatusDoPedido;
@@ -28,11 +27,9 @@ public class Pedido {
 	private Instant momento;
 	private StatusDoPedido Status;
 	
-	
 	@ManyToOne
 	@JoinColumn(name = "cliente_id")
 	private Usuario cliente;
-	
 	
 	@OneToOne(mappedBy = "pedido", cascade = CascadeType.ALL)
 	private Pagamento pagamento;
@@ -46,7 +43,7 @@ public class Pedido {
 	public Pedido(Long id, Instant momento, StatusDoPedido status) {
 		this.id = id;
 		this.momento = momento;
-		Status = status;
+		this.Status = status;
 	}
 
 	public Long getId() {
@@ -70,7 +67,7 @@ public class Pedido {
 	}
 
 	public void setStatus(StatusDoPedido status) {
-		Status = status;
+		this.Status = status;
 	}
 
 	public Usuario getCliente() {
@@ -80,9 +77,9 @@ public class Pedido {
 	public void setCliente(Usuario cliente) {
 		this.cliente = cliente;
 	}
-	
-	public List<Produto> getProduto(){
-		return items.stream().map(X -> X.getProduto()).toList();
-	}
+//	
+//	public List<Produto> getProduto(){
+//		return items.stream().map(X -> X.getProduto()).toList();
+//	}
 
 }

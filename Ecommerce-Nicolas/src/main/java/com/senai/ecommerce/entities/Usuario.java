@@ -21,18 +21,18 @@ public class Usuario {
 	private String email;
 	private String telefone;
 	private String senha;
-	private String[] roles;
+//	private String[] roles;
 	
 	@OneToMany(mappedBy = "cliente")
 	private List<Pedido> pedidos = new ArrayList<>();
-	
-	public Usuario(Long id, String nome, String email, String telefone, String senha, String[] roles) {
+																						//	 String[] roles
+	public Usuario(Long id, String nome, String email, String telefone, String senha) {
 		this.id = id;
 		this.nome = nome;
 		this.email = email;
 		this.telefone = telefone;
 		this.senha = senha;
-		this.roles = roles;
+//		this.roles = roles;
 	}
 
 	public Usuario() {
@@ -78,11 +78,11 @@ public class Usuario {
 		this.senha = senha;
 	}
 
-	public String[] getRoles() {
-		return roles;
-	}
-
-	public void setRoles(String[] roles) {
-		this.roles = roles;
-	}
+//	public String[] getRoles() {
+//		return roles;
+//	}
+//
+//	public void setRoles(String[] roles) {
+//		this.roles = roles;
+//	}
 }
